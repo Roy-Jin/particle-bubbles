@@ -7,6 +7,4 @@ Canvas.
 
 ```bash
 npm install particle-bubbles
-# or
-yarn add particle-bubbles
 ```
