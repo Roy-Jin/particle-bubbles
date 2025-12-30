@@ -1,0 +1,125 @@
+# 依赖目录
+node_modules/
+.pnp/
+.pnp.js
+
+# 构建输出
+# dist/
+# dist-ssr/
+# *.tsbuildinfo
+
+# 开发环境
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 日志文件
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 操作系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 编辑器文件
+.vscode/
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# 测试相关
+coverage/
+.nyc_output
+
+# 临时文件
+tmp/
+temp/
+
+# 包管理器相关
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 类型声明文件（如果使用纯JavaScript）
+*.d.ts
+
+# 本地开发配置文件
+config.local.*
+*.local.*
+
+# 示例和演示文件（如果不想提交）
+# examples/build/
+# demo/
+
+# 自动生成的文件
+*.log
+.cache/
+.parcel-cache/
+
+# 部署相关
+*.zip
+*.tar.gz
+
+# 特定的IDE文件
+.sublime-*
+.project
+.classpath
+.settings/
+.factorypath
+
+# 文档生成
+docs/_build/
+docs/_site/
+
+# Windows特定文件
+[Ll]ogs/
+[Ww]indows[Tt]emp/
+
+# Git相关
+.gitattributes
+.gitkeep
+
+# 证书文件
+*.pem
+*.cert
+*.key
+
+# 本地配置文件（自定义）
+local.config.ts
+local.config.js
+
+# 调试文件
+debug/
+*.debug.*
+
+# 资源文件（如果不想提交原始资源）
+source/
+!assets/dist/
+
+# 可执行文件
+*.exe
+*.out
+*.app
+
+# 压缩文件
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip

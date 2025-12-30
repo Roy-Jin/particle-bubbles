@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Particle Bubbles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #canvas {
+            background-color: #222;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+
+<script type="module">
+    import ParticleBubbles from '../dist/index.esm.js';
+
+    const canvas = document.getElementById('canvas');
+
+    window.particleBubbles = new ParticleBubbles(canvas, {
+        color: "#00ff00",
+    })
+
+    particleBubbles.addTasks([
+        "你",
+        "好",
+        "#color #fff",
+        "世界",
+        "!",
+        particleBubbles.circle(30),
+        particleBubbles.rectangle(20, 30),
+        particleBubbles.createTask("color", ["#ff8000"], {
+            delay: 0
+        }),
+        particleBubbles.countdown(3),
+        particleBubbles.createTask("image", ["./favicon.png"], {
+            color: "#ff0000",
+        }),
+        particleBubbles.createTask("letter", ["Hello World!"]),
+        ""
+    ])
+</script>
+
+
+</html>

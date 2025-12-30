@@ -1,0 +1,45 @@
+{
+  "name": "@r-j/particle-bubbles",
+  "version": "1.0.0",
+  "description": "A customizable particle animation library for text, shapes and images",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "clean": "rimraf dist",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "particle",
+    "animation",
+    "canvas",
+    "text",
+    "shape",
+    "visualization"
+  ],
+  "author": "Roy-Jin",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.0.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}
