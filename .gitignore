@@ -93,6 +93,7 @@ docs/_site/
 .gitkeep
 
 # 证书文件
+.npmrc
 *.pem
 *.cert
 *.key

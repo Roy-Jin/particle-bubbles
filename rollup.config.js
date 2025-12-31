@@ -1,6 +1,5 @@
 import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
 import { readFileSync } from 'fs';
 
 const pkg = JSON.parse(readFileSync('./package.json', 'utf8'));
@@ -10,12 +9,6 @@ export default {
   output: [
     {
       file: pkg.main,
-      format: 'cjs',
-      sourcemap: true,
-      exports: 'named'
-    },
-    {
-      file: pkg.module,
       format: 'esm',
       sourcemap: true,
       exports: 'named'
@@ -23,7 +16,7 @@ export default {
     {
       file: pkg.unpkg,
       format: 'umd',
-      name: 'ParticleAnimator',
+      name: 'ParticleBubbles',
       sourcemap: true,
       exports: 'named',
       globals: {}
@@ -34,7 +27,6 @@ export default {
       browser: true,
       extensions: ['.js', '.ts']
     }),
-    commonjs(),
     typescript({
       tsconfig: './tsconfig.json',
       declaration: true,

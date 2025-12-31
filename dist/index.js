@@ -764,16 +764,14 @@ class ParticleBubbles {
             ? this.parseStringTask(task)
             : task;
         this.taskQueue.push(parsedTask);
-        // 如果当前没有运行，且只有一个任务，则立即执行
-        if (!this.isRunning && this.taskQueue.length === 1) {
-            this.start();
-        }
+        return this;
     }
     /**
      * 批量添加任务
      */
     addTasks(tasks) {
         tasks.forEach((task) => this.addTask(task));
+        return this;
     }
     /**
      * 立即执行单个任务（不加入队列）
@@ -867,4 +865,4 @@ class ParticleBubbles {
 }
 
 export { ParticleBubbles as default };
-//# sourceMappingURL=index.esm.js.map
+//# sourceMappingURL=index.js.map

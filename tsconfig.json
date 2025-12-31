@@ -17,7 +17,8 @@
     "isolatedModules": true,
     "noEmit": false,
     "allowSyntheticDefaultImports": true,
-    "types": []
+    "types": [],
+    "importHelpers": false,
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]

@@ -356,24 +356,21 @@ export default class ParticleBubbles {
   /**
    * 添加任务到队列
    */
-  addTask(task: ParticleTask | string): void {
+  addTask(task: ParticleTask | string): ParticleBubbles {
     const parsedTask = typeof task === "string"
       ? this.parseStringTask(task)
       : task;
 
     this.taskQueue.push(parsedTask);
-
-    // 如果当前没有运行，且只有一个任务，则立即执行
-    if (!this.isRunning && this.taskQueue.length === 1) {
-      this.start();
-    }
+    return this;
   }
 
   /**
    * 批量添加任务
    */
-  addTasks(tasks: (ParticleTask | string)[]): void {
+  addTasks(tasks: (ParticleTask | string)[]): ParticleBubbles {
     tasks.forEach((task) => this.addTask(task));
+    return this;
   }
 
   /**
