@@ -65,20 +65,6 @@ export default class ParticleBubbles {
     this.activeTimers.delete(timerId);
   }
 
-  /**
-   * 延迟执行函数
-   */
-  private delay(ms: number): Promise<void> {
-    return new Promise((resolve) => {
-      const timerId = this.registerTimer(
-        window.setTimeout(() => {
-          this.unregisterTimer(timerId);
-          resolve();
-        }, ms),
-      );
-    });
-  }
-
   // 核心命令方法
   private commands = {
     letter: async (text: string, fast: boolean = false) => {
@@ -140,7 +126,7 @@ export default class ParticleBubbles {
             resolve();
           } else {
             current--;
-            const timerId = this.registerTimer(
+            this.registerTimer(
               window.setTimeout(showNextNumber, interval),
             );
           }
