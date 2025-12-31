@@ -48,11 +48,6 @@ coverage/
 tmp/
 temp/
 
-# 包管理器相关
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
 # 类型声明文件（如果使用纯JavaScript）
 *.d.ts
 
